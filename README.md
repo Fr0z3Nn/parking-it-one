@@ -16,7 +16,8 @@
 ***
 ## Stack
 - Open JDK 8    
-- Spring Boot    
+- Spring Boot 
+- Spring Data   
 - H2 Database
 - Lombok    
 - Mockito
