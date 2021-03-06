@@ -11,3 +11,8 @@ class ParkingApplicationTests {
     }
 
 }
+/*
+System.out.println(panelService.findFreeParkingPlaces());
+        mockMvc.perform(get("/api/status"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON));*/

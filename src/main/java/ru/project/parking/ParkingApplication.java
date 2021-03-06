@@ -28,6 +28,6 @@ public class ParkingApplication {
     @PostConstruct
     public void insertParkingPlace() {
         IntStream.range(1, AmountParkingSpaces + 1)
-                .forEach(num -> parkingRepository.save(new Parking(num, null,false)));
+                .forEach(num -> parkingRepository.save(new Parking(num, null,true)));
     }
 }

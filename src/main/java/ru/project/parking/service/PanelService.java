@@ -1,5 +1,10 @@
 package ru.project.parking.service;
 
+import ru.project.parking.dto.ParkingDTO;
+import ru.project.parking.dto.StatusDTO;
+
 public interface PanelService {
-    int findFreeParkingPlaces();
+    StatusDTO findFreeParkingPlaces();
+
+    ParkingDTO getFreeParkingPlaceById(long id);
 }

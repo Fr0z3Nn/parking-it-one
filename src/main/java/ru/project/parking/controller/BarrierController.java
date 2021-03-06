@@ -15,8 +15,16 @@ import ru.project.parking.service.BarrierService;
 @AllArgsConstructor
 public class BarrierController {
     private final BarrierService barrierService;
+
     @PostMapping("/add")
-    public ResponseEntity<ParkingDTO> addCar(@RequestParam String carNum){
+    public ResponseEntity<ParkingDTO> addCar(@RequestParam String carNum) {
         ParkingDTO parkingDTO = barrierService.addCarToParking(carNum);
-        return new ResponseEntity<>(parkingDTO,HttpStatus.OK);
-    }}
+        return new ResponseEntity<>(parkingDTO, HttpStatus.OK);
+    }
+
+    @PostMapping("/remove")
+    public ResponseEntity<String> removeCar(@RequestParam String carNum) {
+        barrierService.removeCarFromParking(carNum);
+        return new ResponseEntity<>("Car successfully deleted", HttpStatus.OK);
+    }
+}
